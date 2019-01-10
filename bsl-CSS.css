@@ -1,0 +1,251 @@
+/*Sets margin and padding to 0 for whole page*/
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/*Sets grey background*/
+body{
+	background-color: #C7C1C1;
+}
+
+/*Sets whole page inside body to white colour with minimum and maximum widths.
+Sets margin to automatically create even left and right spaces.
+Sets font and postion.*/
+#page-wrapper{
+	position: relative;
+	background-color: white;
+	min-width: 510px;
+	max-width: 960px;
+	margin: 0 auto;
+	font-family: "Palatino Linotype", "Times", serif;
+}
+
+/*Sets header colour and font*/
+h1, h2, h3{
+	color: #004A83;
+	font-family: "Lucida Sans Unicode", "Times", serif;
+	margin:10px 0 20px 10px;
+}
+
+p{
+	font-family: "Palatino Linotype", "Times", serif;
+	margin:10px 10px 20px 10px;
+	font-size: 16px;
+}
+
+/*Sets navigation bar to top right with 100% width of page.
+Sets background to the blue colour. Aligns the list to the right and gets rid of the bullet points on the list.*/
+#nav{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	background-color: #004A83;
+	list-style-type: none;
+	text-align: right;
+	height: 42px;
+}
+
+/*Gives correct padding around navigation items.*/
+#nav li{
+	display: inline-block;
+	padding:10px 10px 10px 10px;
+}
+
+/*Changes background colour of navigation items on hover*/
+#nav li:hover {
+    background-color: #555;
+}
+
+/*Sets navigation items font size and colour. Gets rid of underlines.*/
+#nav a{
+	color: white;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+/*Sets up outside of dropdown menu*/
+#dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/*Ensures dropdown menu items don't display by default
+Sets width, padding and background colour.
+Gives a higher z index so items show up when hovered over*/
+#dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #004A83;
+    min-width: 100px;
+    padding: 12px 16px;
+    z-index: 2;
+}
+
+/*Displays dropdown menu when hovering over the link*/
+#dropdown:hover #dropdown-content {
+    display: block;
+}
+
+/*Positions the header correctly and displays imae of hands*/
+#main-header{
+	position: relative;
+	top: 45px;
+	height: 85px;
+	background-image: url("https://internal.cs.ncl.ac.uk/modules/2017-18/csc8004/bsl/css/sign_language.png");
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	margin: 0 20px 0 0;
+}
+
+/*Gives correct spacing to introduction from top*/
+#intro{
+	padding-top: 60px;
+}
+
+/*Correct colour and height for horizontal rules.*/
+hr{
+	background-color: #004A83;
+	height: 10px;
+}
+
+/*Cretes container for the background image to be placed in and floats it to the right*/
+#fingerspelling-image-container{
+	width: 420px;
+	height: 370px;
+	float: right;
+	background-image: url("https://internal.cs.ncl.ac.uk/modules/2017-18/csc8004/bsl/css/420x370-box.png");
+	margin: 0 10px 0 10px;
+}
+
+/*Adjusts position of central image inside the container*/
+#fingerspelling-image{
+	position: relative;
+	left: 20px;
+	top: 21px;
+}
+
+/*Creates container for map and legend. Adds border.*/
+#linguistics-container{
+	float: left;
+	border-style: double;
+	margin: 0 10px 0 10px;
+	width: 50%;
+}
+
+/*Centre aligns text under map and gives bottom border.*/
+#maptext p{
+	text-align: center;
+	border-bottom: solid;
+	padding-bottom: 10px;
+}
+
+/*Changes legend label font and case*/
+#legendtext p{
+	text-transform: uppercase;
+	font-family: fantasy, "Times", serif;
+}
+
+/*Changes legend text to occupy 80% of the container and display as inline block*/
+#maplegendtext p{
+	display: inline-block;
+	width: 80%;
+	margin:0 0 0 0;
+}
+
+/*Ensures key images display as inline block*/
+#maplegendtext img{
+	display: inline-block;
+	margin: 0 10px 0 10px;
+}
+
+/*Gives correect margin to text left of map and key*/
+#linguistics-right-text p{
+	margin-left: 50%;
+}
+
+/*Gives correect margin to text in list left of map and key*/
+#linguistics-right-text ul{
+	margin-left: 57%;
+	margin-right: 20px;
+}
+
+/*Ensures opening paragraph next to map and key has correct top spacing*/
+#opening-linguistics{
+	padding-top: 20px;
+}
+
+/*Clears floated item*/
+#end-linguistics{
+	clear: both;
+}
+
+/*Provides right floated container for video with background image*/
+#video-container{
+	width: 460px;
+	height: 380px;
+	float: right;
+	background-image: url("https://internal.cs.ncl.ac.uk/modules/2017-18/csc8004/bsl/css/460x320-box.png");
+	background-repeat: no-repeat;
+	margin: 0 10px 0 10px;
+}
+
+/*Correctly positions video in the container*/
+#video{
+	position: relative;
+	left: 20px;
+	top: 20px;
+}
+
+/*Centres text under video and makes it smaller*/
+#video-container p{
+	text-align: center;
+	font-size: 14px;
+}
+
+/*Corrects margin of list in british sign language section*/
+#bsllist ul{
+	margin-left: 40px;
+}
+
+/*Colours word red*/
+.red-letters{
+	color: red;
+}
+
+/*Groups picture and description as inline block with set width and margin.
+Aligns text to centre.*/
+.letters-box{
+	display: inline-block;
+	width:102px;
+	margin: 0 10px 15px 10px;
+	text-align: center;
+}
+
+/*Gives a border to the images. Takes away margin and padding.*/
+#letters img, #numbers img{
+	border-style: solid;
+	border-width: 1px;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+
+/*Sets colour, width, font, case and line height for labels of images.*/
+#letters p, #numbers p{
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	width:100%;
+	line-height: 25px; 
+	background-color: #004A83;
+	color: white;
+	font-family: "fantasy", "Times", serif; 
+	text-transform: uppercase;
+	font-size: 12px; 
+}
+
+/*Right aligns wikipedia reference*/
+#wiki{
+	text-align: right;
+	padding-bottom: 10px;
+}
